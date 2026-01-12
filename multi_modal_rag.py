@@ -49,7 +49,7 @@ chunks = chunk_by_title(
 print({len(chunks)})
 
 import os
-os.environ["GEMINI_API_KEY"]="AIzaSyCvxJufnWOKfNiNzGwBNt9IbJq1U-4pUTY"
+os.environ["GEMINI_API_KEY"]="GEMINI_API_KEY"
 from langchain_google_genai import ChatGoogleGenerativeAI
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
@@ -247,8 +247,5 @@ print("\n--- Query 2 (with context) ---")
 print(f"Question: {query_2}")
 print(f"Answer: {result_2['answer']}")
 
-!pip freeze > requirements.txt
 
-from google.colab import files
-files.download("requirements.txt")
 
